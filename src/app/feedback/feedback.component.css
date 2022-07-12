@@ -1,0 +1,81 @@
+.errorClass{
+    color: red;
+    font-size: 13px;
+}
+.msg{
+    margin: 0;
+    width: 400px;
+    text-align: right;
+}
+div{
+    height: 50px;
+}
+form{
+    margin: 20px auto;
+    width: 450px;
+    border:2px solid rgb(11, 73, 70);
+    border-radius: 30px;
+    padding: 20px;
+}
+label{
+    font-weight: 600;
+    display: inline-block;
+    width: 130px;
+    text-align: left;
+    /* border: 1px solid red; */
+}
+input,select{
+    width: 200px;
+    background-color: rgb(215, 241, 240);
+    padding-left: 10px;
+    border-radius:5px ;
+    height: 25px;
+    border:1px solid rgb(11, 73, 70);
+}
+textarea{
+    transform: translateY(15%);
+    padding-left: 10px;
+    background-color: rgb(215, 241, 240);
+}
+button{
+    border-radius: 8px;
+    height: 35px;
+    background-color: rgb(46, 124, 120);
+    font-size: 18px;
+    width: 150px;
+    color: white;
+    transform: translateY(80%);
+    /* transform: translateX(-150%); */
+}
+
+.heading{
+    margin-top: 20px;
+    font-style: italic;
+    font-size: 20px;
+    font-weight: 600;
+}
+table{
+    margin: 20px auto;
+    border: 1px solid rgb(11, 73, 70);
+}
+tr{
+    text-align: center;
+    height: 25px;
+}
+td{
+    width: 125px;
+}
+th{
+    background-color: rgb(46, 124, 120);
+    font-size: 18px;
+    width: 180px;
+    color: white;
+}
+tr:nth-child(odd){
+    background-color: rgb(181, 202, 195);
+    color: rgb(33, 100, 97);
+}
+tr:nth-child(even){
+    background-color: rgb(216, 230, 225);
+    color: rgb(33, 100, 97);
+}

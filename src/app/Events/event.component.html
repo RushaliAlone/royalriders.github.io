@@ -1,0 +1,21 @@
+<h1>{{eventHeading}}</h1>
+<table>
+    <thead>
+        <th>Event Name</th>
+        <th>Event Date</th>
+        <th>Start Location</th>
+        <th>Destination</th>
+        <th>Rider Address</th>
+        <th>Contact No.</th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let e of err">
+            <td>{{e.eventName}}</td>
+            <td>{{e.eventDate|date:'dd-MM-yyyy'}}</td>
+            <td>{{e.start}}</td>
+            <td>{{e.destination}}</td>
+            <td>{{e.address}}</td>
+            <td>{{e.contactNo}}</td>
+        </tr>
+    </tbody>
+</table>

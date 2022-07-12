@@ -1,0 +1,47 @@
+<h1>{{title}}</h1>
+<form [formGroup]="myForm" (ngSubmit)="onFormSubmit()">
+    <div>
+        <label>Person Name:  </label>
+        <input type="text" formControlName="pname">
+        <p class="msg" *ngIf="pname.invalid" [ngClass]="'errorClass'">Person name is required!</p>
+    </div>
+    <!-- <div>
+        <label>Feedback Date:  </label>
+        <input type="date" formControlName="fdate">
+        <span *ngIf="fdate.invalid" [ngClass]="'errorClass'">Date is required</span>
+    </div> -->
+    <div>
+        <label>Ratings:  </label>
+        <input type="number" formControlName="rating" placeholder="Upto 5 Stars">
+        <p class="msg"*ngIf="rating?.errors?.required" [ngClass]="'errorClass'">Please provide Rating</p>
+        <p class="msg" *ngIf="rating?.errors?.min" [ngClass]="'errorClass'">Rating can not be less than 1</p>
+        <p class="msg" *ngIf="rating?.errors?.max" [ngClass]="'errorClass'">Rating can not be greater than 5</p>
+        </div>
+    <div>
+        <label>Comments:  </label>
+        <textarea name="comments" cols="25" rows="3" formControlName="comments" placeholder="Comments!!!"></textarea>
+        <p class="msg" *ngIf="comments.invalid" [ngClass]="'errorClass'">Let us know about your experience...</p>
+    </div>
+    <div>
+        <button type="submit">Submit</button>
+    </div>
+</form>
+<p class="heading">Registered FeedBack</p>
+<table>
+    <tr>
+        <th>Person Name</th>
+        <td>{{myForm.controls['pname'].value|titlecase}}</td> 
+    </tr>
+    <!-- <tr>
+        <th>Feedback Date</th>
+        <td>{{myForm.controls['fdate'].value|date:'dd-MM-yyyy'}}</td>
+    </tr> -->
+    <tr>
+        <th>Ratings</th>
+        <td>{{myForm.controls['rating'].value}}</td>
+    </tr>
+    <tr>
+        <th >Comments</th>
+        <td style="width: 280px; word-wrap: break-word;">{{myForm.controls['comments'].value}}</td>
+    </tr>
+</table>

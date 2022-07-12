@@ -1,0 +1,69 @@
+<form #userForm="ngForm" (ngSubmit)="onFormSubmit(userForm)">
+    <div>
+        <label>First Name:</label> &nbsp;&nbsp;&nbsp;&nbsp;
+        <input type="text" name="fname" ngModel>
+    </div>
+    <div>
+        <label>Middel Name:</label> &nbsp;&nbsp;&nbsp;&nbsp;
+        <input type="text" name="mname" >
+    </div>
+    <div>
+        <label>Last Name:</label> &nbsp;&nbsp;&nbsp;&nbsp;
+        <input type="text" name="lname" ngModel>
+    </div>
+
+    <div>
+        <label >Gender:</label> &nbsp;&nbsp;&nbsp;&nbsp;
+        <input type="radio" name="gender" id="g1" value="Female" ngModel><label for="g1">Female</label> &nbsp;&nbsp;&nbsp;&nbsp;
+        <input type="radio" name="gender" id="g2" value="Male" ngModel><label for="g2">Male</label> &nbsp;&nbsp;&nbsp;&nbsp;
+        <input type="radio" name="gender" id="g3" value="Other" ngModel><label for="g3">Other</label> &nbsp;&nbsp;&nbsp;&nbsp;
+    </div>
+    <div>
+        <label>Date of Birth:</label> &nbsp;&nbsp;
+        <input type="date" name="dob" ngModel>
+    </div>
+    <div>
+        <label>City:</label> &nbsp;&nbsp;&nbsp;&nbsp;
+        <select name="city" ngModel>
+            <option *ngFor="let c of cities">{{c}}</option>
+        </select>
+    </div>
+    <div>
+        <label>Contact No:</label> &nbsp;&nbsp;&nbsp;&nbsp;
+        <input type="text" name="contact" maxlength="10" ngModel>
+    </div>
+    <div>
+        <label>Address:</label> &nbsp;&nbsp;&nbsp;&nbsp;
+        <textarea name="address"  cols="30" rows="3"></textarea>
+    </div>
+
+    <div>
+        <button type="submit">Submit</button> &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
+        <button type="button" (click)="onClear(userForm)">Clear Form</button>
+    </div>
+</form>
+
+<p>Entered Details</p>
+<table>
+    <tr>
+        <th>Person Name</th>
+        <td>{{userForm.controls['fname'].value|titlecase}}</td>
+        <td>{{userForm.controls['lname'].value|titlecase}}</td>
+    </tr>
+    <tr>
+        <th>Gender</th>
+        <td colspan="2">{{userForm.controls['gender'].value}}</td>
+    </tr>
+    <tr>
+        <th>Date of Birth</th>
+        <td colspan="2">{{userForm.controls['dob'].value|date:'dd-MM-yyyy'}}</td>
+    </tr>
+    <tr>
+        <th>City</th>
+        <td colspan="2">{{userForm.controls['city'].value}}</td>
+    </tr>
+    <tr>
+        <th>Contact No</th>
+        <td colspan="2">{{userForm.controls['contact'].value}}</td>
+    </tr>
+</table>

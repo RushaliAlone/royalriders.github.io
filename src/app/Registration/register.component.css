@@ -1,0 +1,76 @@
+form{
+    margin: 20px auto;
+    width: 800px;
+    border:2px solid rgb(11, 73, 70);
+    border-radius: 30px;
+    padding: 20px;
+}
+div{
+    margin: 5px;
+    display: inline-block;
+    width: 350px;
+    /* border: 1px solid red; */
+}
+label{
+    font-weight: 600;
+    margin-left: 0;
+}
+input+label{
+    font-weight: 500;
+}
+input[type="date"],input[type='text'],select{
+    width: 200px;
+    background-color: rgb(215, 241, 240);
+    padding-left: 20px;
+}
+input,select{
+    border-radius:5px ;
+    height: 25px;
+    border:1px solid rgb(11, 73, 70);
+}
+textarea{
+    transform: translateY(25%);
+    background-color: rgb(215, 241, 240);
+}
+button{
+    border-radius: 8px;
+    height: 35px;
+    background-color: rgb(46, 124, 120);
+    font-size: 18px;
+    width: 150px;
+    color: white;
+    transform: translateY(15%);
+    /* transform: translateX(-150%); */
+}
+
+p{
+    margin-top: 20px;
+    font-style: italic;
+    font-size: 20px;
+    font-weight: 600;
+}
+table{
+    margin: 20px auto;
+    border: 1px solid rgb(11, 73, 70);
+}
+tr{
+    text-align: center;
+    height: 25px;
+}
+td{
+    width: 125px;
+}
+th{
+    background-color: rgb(46, 124, 120);
+    font-size: 18px;
+    width: 180px;
+    color: white;
+}
+tr:nth-child(odd){
+    background-color: rgb(181, 202, 195);
+    color: rgb(33, 100, 97);
+}
+tr:nth-child(even){
+    background-color: rgb(216, 230, 225);
+    color: rgb(33, 100, 97);
+}
